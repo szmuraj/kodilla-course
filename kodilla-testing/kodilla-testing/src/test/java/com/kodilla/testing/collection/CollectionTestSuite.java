@@ -17,13 +17,13 @@ public class CollectionTestSuite {
         System.out.println("Test Case: end");
     }
 
-    @DisplayName("WHEN create empty List, " +
-            "THEN ")
+    @DisplayName("WHEN create empty List with Integer, " +
+            "THEN getOddNumbersList should return null")
     @Test
     void testOddNumbersExterminatorEmptyList() {
-
+    }
     @DisplayName("WHEN odd and even numbers are in the List, " +
-            "THEN ")
+            "THEN List should behave normaly")
     @Test
     void testOddNumbersExterminatorNormalList() {
 
