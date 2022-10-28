@@ -31,9 +31,11 @@ class ForumTestSuite {
     void testCaseRealName() {
         //Given
         SimpleUser simpleUser = new SimpleUser("theForumUser", "John Smith");
+
         //When
         String result = simpleUser.getRealName();
         System.out.println("Testing " + result);
+
         //Then
         Assertions.assertEquals("John Smith", result);
     }
@@ -45,11 +47,11 @@ class ForumTestSuite {
     void testCaseUsername() {
         //Given
         SimpleUser simpleUser = new SimpleUser("theForumUser", "John Smith");
-
         String expectedResult = "theForumUser";
 
         //When
         String result = simpleUser.getUsername();
+
         //Then
         Assertions.assertEquals(expectedResult, result);
     }
