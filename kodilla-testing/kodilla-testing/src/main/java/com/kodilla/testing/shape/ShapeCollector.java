@@ -11,13 +11,19 @@ public class ShapeCollector {
     }
 
     public boolean removeFigure(Shape shape) {
-        List.remove(shape);
+        if(List.remove(shape)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public Shape getFigure(int n) {
-        return null;
+
+       return List.get(n);
     }
 
-    public void showFigures() {
+    public Object showFigures() {
+        return List;
     }
 }
