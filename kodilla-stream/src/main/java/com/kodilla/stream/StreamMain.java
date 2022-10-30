@@ -26,6 +26,6 @@ public class StreamMain {
         System.out.println("Editing text with some beautifiers");
         poemBeautifier.beautify("Text Example".toLowerCase());
         poemBeautifier.beautify("Text Example".toUpperCase());
-        poemBeautifier.beautify(String.valueOf("Text Example".startsWith("Bla bla")));
+        poemBeautifier.beautify(String.valueOf("***" + "Text Example" + "***"));
     }
 }
