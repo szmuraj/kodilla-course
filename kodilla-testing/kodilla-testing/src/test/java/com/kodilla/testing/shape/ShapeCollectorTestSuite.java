@@ -86,26 +86,6 @@ public class ShapeCollectorTestSuite {
             Assertions.assertEquals(shapeCollector.getFigure(2), circle);
 
         }
-
-        @DisplayName("when showFigures, " +
-                "then getFigure should show all figures"
-        )
-        @Test
-        void testShowFigures() {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-
-            //When
-            Shape circle = new Circle();
-
-            shapeCollector.addFigure(circle);
-            shapeCollector.addFigure(circle);
-            shapeCollector.addFigure(circle);
-
-            //Then
-            Assertions.assertEquals(shapeCollector.showFigures(), circle);
-
-        }
     }
     @Nested
     @DisplayName("Tests for Square")
@@ -164,26 +144,6 @@ public class ShapeCollectorTestSuite {
 
             //Then
             Assertions.assertEquals(shapeCollector.getFigure(2), square);
-
-        }
-
-        @DisplayName("when showFigures, " +
-                "then getFigure should show all figures"
-        )
-        @Test
-        void testShowFigures() {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-
-            //When
-            Shape square = new Square();
-
-            shapeCollector.addFigure(square);
-            shapeCollector.addFigure(square);
-            shapeCollector.addFigure(square);
-
-            //Then
-            Assertions.assertEquals(shapeCollector.showFigures(), square);
 
         }
     }
@@ -246,25 +206,6 @@ public class ShapeCollectorTestSuite {
             //Then
             Assertions.assertEquals(shapeCollector.getFigure(2), triangle);
 
-        }
-
-        @DisplayName("when showFigures, " +
-                "then getFigure should show all figures"
-        )
-        @Test
-        void testShowFigures() {
-            //Given
-            ShapeCollector shapeCollector = new ShapeCollector();
-
-            //When
-            Shape triangle = new Triangle();
-
-            shapeCollector.addFigure(triangle);
-            shapeCollector.addFigure(triangle);
-            shapeCollector.addFigure(triangle);
-
-            //Then
-            Assertions.assertEquals(shapeCollector.showFigures(), triangle);
         }
     }
 }
