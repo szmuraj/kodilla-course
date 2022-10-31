@@ -1,35 +1,30 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.iterate.NumbersGenerator;
-import com.kodilla.stream.lambda.ExpressionExecutor;
-import com.kodilla.stream.reference.FunctionalCalculator;
+import com.kodilla.stream.book.Book;
+import com.kodilla.stream.book.BookDirectory;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+
+import java.util.stream.Collectors;
 
 public class StreamMain {
 
     public static void main(String[] args) {
-        ExpressionExecutor expressionExecutor = new ExpressionExecutor();
+        BookDirectory theBookDirectory = new BookDirectory();
+        String theResultStringOfBooks = theBookDirectory.getList().stream()  // [1]
+                .filter(book -> book.getYearOfPublication() > 2005)
+                .map(Book::toString)
+                .collect(Collectors.joining(",\n","<<",">>"));                    // [2]
 
-        System.out.println("Calculating expressions with lambdas");
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a + b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a - b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a * b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a / b);
+        System.out.println(theResultStringOfBooks);
 
-        System.out.println("Calculating expressions with method references");
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::multiplyAByB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
+        Forum theForum = new Forum();
+        String  theResultStringOfForum = theForum.getUserList().stream()
+                .filter(user -> user.getUserSex() == 'M')
+                .filter(user -> user.getUserBirthDate().getYear() < 2002)
+                .filter(user -> user.getPostsCount() >= 1)
+                .map(user -> user.getUserIndex() + " : " + user.getUserName()).toString();
 
-        PoemBeautifier poemBeautifier = new PoemBeautifier();
-
-        System.out.println("Editing text with some beautifiers");
-        poemBeautifier.beautify("Text Example".toLowerCase());
-        poemBeautifier.beautify("Text Example".toUpperCase());
-        poemBeautifier.beautify(String.valueOf("***" + "Text Example" + "***"));
-
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);
+        System.out.println(theResultStringOfForum);
     }
 }
