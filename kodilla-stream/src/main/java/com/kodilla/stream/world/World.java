@@ -11,7 +11,7 @@ import static com.kodilla.stream.world.Continent.northAmerica;
 
 public final class World {
 
-    private final List<List<Country>> earth = new ArrayList<List<Country>>();
+    private final List<List<Country>> earth = new ArrayList<>();
     private final List<List<Country>> mars = new ArrayList<>();
 
     public World() {
