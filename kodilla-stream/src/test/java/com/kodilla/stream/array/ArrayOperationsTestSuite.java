@@ -10,7 +10,7 @@ public class ArrayOperationsTestSuite {
     @Test
     void testGetAverage() {
         //Given
-        double actual = ArrayOperations.getAverage(20);
+        OptionalDouble actual = ArrayOperations.getAverage(20);
 
 
         //When
@@ -21,6 +21,7 @@ public class ArrayOperationsTestSuite {
         avg = avg/20;
 
         //Then
-        Assertions.assertEquals(avg, actual);
+
+        Assertions.assertEquals(avg,actual.getAsDouble());
     }
 }
