@@ -4,4 +4,7 @@ findProject(':kodilla-testing:kodilla-testing')?.name = 'kodilla-testing'
 include 'kodilla-testing:kodilla-testing:user'
 findProject(':kodilla-testing:kodilla-testing:user')?.name = 'user'
 include 'kodilla-stream'
+include '../kodilla-exception/kodilla-exception'
+findProject(':../kodilla-exception/kodilla-exception')?.name = 'kodilla-exception'
+include 'kodilla-exception'
 
