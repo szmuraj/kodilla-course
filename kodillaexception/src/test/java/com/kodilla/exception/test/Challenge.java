@@ -11,12 +11,11 @@ public class Challenge {
     @Test
     public void testProbablyWillThrowException() {
         //Given
-        SecondChallenge.probablyIWillThrowException(1,0);
-        ExceptionHandling exceptionHandling = new ExceptionHandling();
+
         //When
 
         //Then
 
-        assertThrows(Exception.class, () -> exceptionHandling);
+
     }
 }
