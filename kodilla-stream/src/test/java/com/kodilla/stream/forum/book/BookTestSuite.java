@@ -1,5 +1,7 @@
-package com.kodilla.stream.book;
+package com.kodilla.stream.forum.book;
 
+import com.kodilla.stream.book.Book;
+import com.kodilla.stream.book.BookDirectory;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.stream.IntStream;

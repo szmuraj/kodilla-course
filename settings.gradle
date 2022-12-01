@@ -16,4 +16,5 @@ include 'kodilla-exception'
 include 'exception'
 include 'kodilla-exception'
 include 'kodillaexception'
+include 'kodilla-good-patterns'
 

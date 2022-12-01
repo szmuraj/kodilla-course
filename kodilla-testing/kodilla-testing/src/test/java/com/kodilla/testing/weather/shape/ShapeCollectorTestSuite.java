@@ -1,10 +1,9 @@
-package com.kodilla.testing.shape;
+package com.kodilla.testing.weather.shape;
 
 import com.kodilla.testing.shape.*;
 
 import org.junit.jupiter.api.*;
 
-import java.util.List;
 
 public class ShapeCollectorTestSuite {
     @BeforeEach
