@@ -1,8 +1,8 @@
 package com.kodilla.good.patterns.challenges;
 
-import com.kodilla.good.patterns.challenges.OrderService.OrderDTO;
-import com.kodilla.good.patterns.challenges.OrderService.OrderRequest;
-public class ProductOrderService {
+
+
+/*public class ProductOrderService {
     private InformationService informationService;
     private OrderService orderService;
     private OrderRepository orderRepository;
@@ -13,7 +13,7 @@ public class ProductOrderService {
         this.orderRepository = orderRepository;
     }
 
-    public OrderDTO process(final OrderRequest orderRequest) {
+*//*    public OrderDTO process(final OrderRequest orderRequest) {
         boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getAmount(), orderRequest.getProduct(), orderRequest.getSeller(), orderRequest.getDeliveryPlace(), orderRequest.getOrderDate());
 
         if (isOrdered) {
@@ -23,7 +23,7 @@ public class ProductOrderService {
 
             return new OrderDTO(orderRequest.getUser(), true);
         } else {
-            return new OrderDTO(orderRequest.getUser(), false);
+            return new OrderDTO(orderRequest.getUser(), false);*//*
         }
     }
-}
+}*/

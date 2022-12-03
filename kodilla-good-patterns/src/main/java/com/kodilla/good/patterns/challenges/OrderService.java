@@ -2,7 +2,7 @@ package com.kodilla.good.patterns.challenges;
 
 import java.time.LocalDateTime;
 
-public class OrderService {
+/*public class OrderService {
     public class OrderDTO {
         private User user;
         private boolean isOrdered;
@@ -39,4 +39,4 @@ public class OrderService {
             return orderDate;
         }
     }
-}
+}*/
