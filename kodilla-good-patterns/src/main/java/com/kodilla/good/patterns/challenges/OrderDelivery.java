@@ -1,6 +1,5 @@
 package com.kodilla.good.patterns.challenges;
 
-public class InformationService {
-
+public class OrderDelivery {
 
 }

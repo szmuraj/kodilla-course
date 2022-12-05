@@ -2,41 +2,41 @@ package com.kodilla.good.patterns.challenges;
 
 import java.time.LocalDateTime;
 
-/*public class OrderService {
-    public class OrderDTO {
-        private User user;
+public class OrderService {
+    public static class OrderDTO {
         private boolean isOrdered;
+        private String deliveryPlace;
+        private LocalDateTime orderDateTime;
 
-        public OrderDTO(final User user, final boolean isOrdered) {
-            this.user = user;
+
+        public OrderDTO(final boolean isOrdered, final String deliveryPlace, final LocalDateTime orderDateTime) {
             this.isOrdered = isOrdered;
+            this.deliveryPlace = deliveryPlace;
+            this.orderDateTime = orderDateTime;
+        }
+
+        public OrderDTO(User userID, boolean b) {
         }
     }
-    public boolean order(final User user,final double amount, final Product product, final Seller seller, final DeliveryPlace deliveryPlace, final LocalDateTime orderDate) {
-        System.out.println("Ordering " + amount + product +  " for: " + user.getName() + user.getSurname()
-                + " to " + deliveryPlace + " at " + orderDate + ". ");
+    public boolean order(final User user, final double amount, final Product product, final int seller, final String deliveryPlace, final LocalDateTime orderDateTime) {
+        System.out.println("Ordering " + amount + product +  " for: " + user.getUserName()
+                + " to " + deliveryPlace + " at " + orderDateTime + ". ");
 
         return true;
     }
 
-    public class OrderRequest {
-        public User getUser() {
-            return user;
-        }
+    public static class OrderRequest {
+        private int amount;
+        private String deliveryPlace;
+        private LocalDateTime orderDateTime;
         public double getAmount() {
             return amount;
         }
-        public Product getProduct() {
-            return getProduct;
-        }
-        public Seller getSeller() {
-            return seller;
-        }
-        public DeliveryPlace getDeliveryPlace() {
+        public String getDeliveryPlace() {
             return deliveryPlace;
         }
         public LocalDateTime getOrderDate() {
-            return orderDate;
+            return orderDateTime;
         }
     }
-}*/
+}

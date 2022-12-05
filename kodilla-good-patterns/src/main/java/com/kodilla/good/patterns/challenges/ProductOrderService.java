@@ -2,10 +2,14 @@ package com.kodilla.good.patterns.challenges;
 
 
 
-/*public class ProductOrderService {
+public class ProductOrderService {
     private InformationService informationService;
     private OrderService orderService;
     private OrderRepository orderRepository;
+    private OrderDelivery orderDelivery;
+    private User user;
+    private Product product;
+    private Seller seller;
 
     public ProductOrderService(final InformationService informationService, final OrderService orderService, final OrderRepository orderRepository) {
         this.informationService = informationService;
@@ -13,17 +17,17 @@ package com.kodilla.good.patterns.challenges;
         this.orderRepository = orderRepository;
     }
 
-*//*    public OrderDTO process(final OrderRequest orderRequest) {
-        boolean isOrdered = orderService.order(orderRequest.getUser(), orderRequest.getAmount(), orderRequest.getProduct(), orderRequest.getSeller(), orderRequest.getDeliveryPlace(), orderRequest.getOrderDate());
+    public OrderService.OrderDTO process(final OrderService.OrderRequest orderRequest) {
+        boolean isOrdered = orderService.order(user.getUserID(), orderRequest.getAmount(), product.getProductID(), seller.getSellerID(), orderRequest.getDeliveryPlace(), orderRequest.getOrderDate());
 
         if (isOrdered) {
-            informationService.inform(orderRequest.getUser(), orderRequest.getProduct);
-            orderRepository.createOrder(orderRequest.getUser(), orderRequest.getProduct(), orderRequest.getSeller(), orderRequest.getDeliveryPlace, orderRequest.amount);
-            orderDelivery;
+            informationService.inform(user.getUserName(), product.getProductName());
+            orderRepository.createOrder(user.getUserID(), product.getProductID(), seller.getSellerID(), orderRequest.getDeliveryPlace(), orderRequest.getAmount());
+            orderDelivery.deliverOrder(orderRequest.getDeliveryPlace(), seller.getSellerAddress());
 
-            return new OrderDTO(orderRequest.getUser(), true);
+            return new OrderService.OrderDTO(user.getUserID(), true);
         } else {
-            return new OrderDTO(orderRequest.getUser(), false);*//*
+            return new OrderService.OrderDTO(user.getUserID(), false);
         }
     }
-}*/
+}
