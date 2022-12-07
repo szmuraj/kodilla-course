@@ -17,7 +17,7 @@ public class ProductOrderService {
         this.orderRepository = orderRepository;
     }
 
-    public OrderService.OrderDTO process(final OrderService.OrderRequest orderRequest) {
+/*    public OrderService.OrderDTO process(final OrderService.OrderRequest orderRequest) {
         boolean isOrdered = orderService.order(user.getUserID(), orderRequest.getAmount(), product.getProductID(), seller.getSellerID(), orderRequest.getDeliveryPlace(), orderRequest.getOrderDate());
 
         if (isOrdered) {
@@ -29,5 +29,5 @@ public class ProductOrderService {
         } else {
             return new OrderService.OrderDTO(user.getUserID(), false);
         }
-    }
+    }*/
 }
