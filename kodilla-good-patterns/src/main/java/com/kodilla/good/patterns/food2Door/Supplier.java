@@ -8,7 +8,7 @@ class Supplier {
     private String supplierName;
     private Supplier supplierAddress;
     private Supplier nip;
-    public static Map<String, String> supplierProductMap = new HashMap<String, String>();
+    public static Map<String, String> supplierProductMap = new HashMap<>();
 
     public String getSupplierName() {
         return supplierName;
