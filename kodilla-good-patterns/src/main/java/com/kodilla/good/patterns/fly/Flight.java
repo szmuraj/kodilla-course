@@ -25,7 +25,7 @@ public class Flight {
     }
 
     public static void setFlight(int flightID, LocalDateTime dateTimeFrom, LocalDateTime dateTimeTo, String airportName, String airportNameShort, String airportNameTo, String airportNameToShort) {
-        Flight flight = new Flight( flightID, dateTimeFrom, dateTimeTo, airportName, airportNameShort, airportNameTo, airportNameToShort);
+        Flight flight = new Flight(flightID, dateTimeFrom, dateTimeTo, airportName, airportNameShort, airportNameTo, airportNameToShort);
         flights.add(flight);
     }
 
@@ -54,15 +54,31 @@ public class Flight {
                 "Gdansk",
                 "GDA");
 
-        String city = "Gdansk";
-        for(Flight e: flights) {
-            if(e.airportNameFrom.equals(city)) {
-                System.out.println("Flights from " + city + " start at " + e.dateTimeFrom);
+        String cityFrom = "Warsaw";
+        String cityBetween = "Gdansk";
+        String cityTo = "Wroclaw";
+
+        for (Flight e : flights) {
+            if (e.airportNameFrom.equals(cityFrom)) {
+                System.out.println("Flights from " + cityFrom + " start at " + e.dateTimeFrom);
             }
 
-            if(e.airportNameTo.equals(city)) {
-                System.out.println("Flights to " + city + " start at " + e.dateTimeFrom);
+            if (e.airportNameTo.equals(cityTo)) {
+                System.out.println("Flights to " + cityFrom + " start at " + e.dateTimeTo);
+            }
+
+            if (e.airportNameFrom.equals(cityFrom) && e.airportNameTo.equals(cityTo)) {
+                System.out.println("Flights from " + cityFrom + " start at " + e.dateTimeFrom + " and land at " + cityTo + " at " + e.dateTimeTo);
+            }
+
+            if (e.airportNameFrom.equals(cityFrom) && e.airportNameTo.equals(cityBetween)) {
+                for (Flight f : flights) {
+                    if (f.airportNameFrom.equals(cityBetween) && f.airportNameTo.equals(cityTo)) {
+                        System.out.println("Flight form " + cityFrom + " to " + cityTo + " landing at " + cityBetween + " start at " + e.dateTimeFrom);
+                    }
+                }
             }
         }
     }
 }
+
