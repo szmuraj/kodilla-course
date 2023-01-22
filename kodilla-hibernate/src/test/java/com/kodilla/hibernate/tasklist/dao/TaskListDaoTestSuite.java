@@ -42,7 +42,7 @@ public class TaskListDaoTestSuite {
     @Test
     void testTaskListDaoSaveWithTasks() {
         //Given
-        Task task = new Task("Test: Learn Hibernate", 14);
+        Task task = new Task(DESCRIPTION, 14);
         Task task2 = new Task("Test: Write some entities", 3);
         TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(20), false);
         TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
