@@ -35,6 +35,7 @@ public class InvoiceDaoTestSuite {
         Invoice invoice = new Invoice("1254", items);
 
         //When
+
         invoiceDao.save(invoice);
         int id = invoice.getId();
 
