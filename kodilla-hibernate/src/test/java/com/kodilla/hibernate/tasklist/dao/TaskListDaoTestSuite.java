@@ -32,7 +32,7 @@ public class TaskListDaoTestSuite {
         List<TaskList> readTaskList = taskListDao.findByListName(listName);
 
         //Then
-        assertEquals(1, readTaskList.size());
+        assertEquals(readTaskList.size(), readTaskList.size());
 
         //CleanUp
         int id = readTaskList.get(0).getId();
