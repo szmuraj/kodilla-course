@@ -24,8 +24,8 @@ public class ShopService {
 
     public Long openOrder(Long userId) {
         if (authenticator.isAuthenticated(userId)) {
-            Long maxOrder = orders.stream()
-                    .mapToLong(o -> o.getOrderId())
+            long maxOrder = orders.stream()
+                    .mapToLong(Order::getOrderId)
                     .max()
                     .orElse(0);
             orders.add(new Order(maxOrder + 1, userId, productService));

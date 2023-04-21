@@ -1,7 +1,7 @@
 package com.kodilla.patterns2.facade.api;
 
 import com.kodilla.patterns2.facade.ShopService;
-import org.aspectj.lang.annotation.Around;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
