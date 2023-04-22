@@ -27,6 +27,6 @@ public class CompanyFacade {
     }
 
     public List<Employee> getEmployeesWithNamesContaining(String str) {
-        return employeeDao.findByLastname();
+        return employeeDao.findByLastname(str);
     }
 }
